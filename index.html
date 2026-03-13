@@ -1,4 +1,3 @@
- 
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,22 +9,46 @@
 
 <h1>Money Bank</h1>
 
-<div class="bank">
+<div class="container">
 
-<h2>Create Account</h2>
-<input type="text" id="name" placeholder="Enter Name">
-<button onclick="createAccount()">Create</button>
+<h2>Register</h2>
+<input type="text" id="regName" placeholder="Name">
+<input type="password" id="regPass" placeholder="Password">
+<button onclick="register()">Register</button>
+
+<h2>Login</h2>
+<input type="text" id="loginName" placeholder="Name">
+<input type="password" id="loginPass" placeholder="Password">
+<button onclick="login()">Login</button>
+
+</div>
+
+<div class="bank" id="bankPanel" style="display:none">
+
+<h2>Account Number: <span id="accNumber"></span></h2>
+
+<h3>Balance: ₹ <span id="balance">0</span></h3>
 
 <h2>Deposit</h2>
 <input type="number" id="deposit">
-<button onclick="depositMoney()">Deposit</button>
+<button onclick="deposit()">Deposit</button>
 
 <h2>Withdraw</h2>
 <input type="number" id="withdraw">
-<button onclick="withdrawMoney()">Withdraw</button>
+<button onclick="withdraw()">Withdraw</button>
 
-<h2>Balance</h2>
-<p id="balance">0</p>
+<h2>Transaction History</h2>
+<ul id="history"></ul>
+
+<button onclick="logout()">Logout</button>
+
+</div>
+
+<div class="admin">
+
+<h2>Admin Panel</h2>
+<button onclick="showUsers()">Show All Users</button>
+<ul id="users"></ul>
 
 </div>
 
